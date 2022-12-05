@@ -41,6 +41,7 @@ run_zsh() {
 
 remove_zsh() {
     sudo rm -rf /root/.oh-my-zsh
+    sudo rm -rf "/home/$(id -un)/.oh-my-zsh"
     sudo dnf remove zsh util-linux-user #removing zsh package 
     chsh -s $(which bash)
     echo "Exit terminal nd Reopen it. You will be into default BASH"
